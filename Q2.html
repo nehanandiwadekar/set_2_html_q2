@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            gap: 16px;
+            padding: 16px;
+        }
+
+        /* Larger screens: 3 column */
+        @media (min-width: 600px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Smaller screens: 1 column */
+        @media (max-width: 599px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin: 16px;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="image1.jpg" alt="Image 1">
+            <h2>Title 1</h2>
+            <p>Description for card 1.</p>
+        </div>
+        <div class="card">
+            <img src="image2.jpg" alt="Image 2">
+            <h2>Title 2</h2>
+            <p>Description for card 2.</p>
+        </div>
+        <div class="card">
+            <img src="image3.jpg" alt="Image 3">
+            <h2>Title 3</h2>
+            <p>Description for card 3.</p>
+        </div>
+        <div class="card">
+            <img src="image4.jpg" alt="Image 4">
+            <h2>Title 4</h2>
+            <p>Description for card 4.</p>
+        </div>
+        <div class="card">
+            <img src="image5.jpg" alt="Image 5">
+            <h2>Title 5</h2>
+            <p>Description for card 5.</p>
+        </div>
+        <div class="card">
+            <img src="image6.jpg" alt="Image 6">
+            <h2>Title 6</h2>
+            <p>Description for card 6.</p>
+        </div>
+    </div>
+</body>
+</html>
